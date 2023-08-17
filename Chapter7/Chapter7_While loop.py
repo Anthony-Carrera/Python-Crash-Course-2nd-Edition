@@ -1,8 +1,7 @@
 #While loop
-
-prompt = "\nTell me something, and I will repeat it back to you:"
-prompt += "\nEnter 'quit' to end the program. "
-message = ""
-while message != 'quit':
-    message = input(prompt)
-    print(message)
+current_number = 0
+while current_number < 20:
+    current_number += 1
+    if current_number % 2 == 0:
+        continue
+    print(current_number)
