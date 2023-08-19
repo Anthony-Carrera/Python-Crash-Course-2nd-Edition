@@ -27,18 +27,27 @@ musician = get_formatted_name('john', 'hooker', 'lee')
 print(musician)
 
 
-def get_formatted_name(first_name, last_name):
-#Return a full name, neatly formatted."""
-    full_name = f"{first_name} {last_name}"
-    return full_name.title()
-while True:
-    print("\nPlease tell me your name:")
-    print("(enter 'q' at any time to quit)")
-    f_name = input("First name: ")
-    if f_name == 'q':
-        break
-    l_name = input("Last name: ")
-    if l_name == 'q':
-        break
-    formatted_name = get_formatted_name(f_name, l_name)
-    print(f"\nHello, {formatted_name}!")
+def greet_users(names):
+
+    for name in names:
+        msg = f"Hello, {name.title()}!"
+        print(msg)
+        
+
+usernames = ['hannah', 'ty', 'margot']
+greet_users(usernames)
+
+
+# Start with some designs that need to be printed.
+unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+# Simulate printing each design, until none are left.
+# Move each design to completed_models after printing.
+while unprinted_designs:
+    current_design = unprinted_designs.pop()
+    print(f"Printing model: {current_design}")
+    completed_models.append(current_design)
+# Display all completed models.
+    print("\nThe following models have been printed:")
+    for completed_model in completed_models:
+        print(completed_model)
